@@ -2,7 +2,10 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.202.5/containers/javascript-node
 {
 	"name": "Node.js",
-	"runArgs": ["--init"],
+	"runArgs": ["--init",
+		"--env=AWS_ACCESS_KEY_ID",
+		"--env=AWS_SECRET_ACCESS_KEY",
+		"--env=AWS_DEFAULT_REGION"],
 	"build": {
 		"dockerfile": "Dockerfile",
 		// Update 'VARIANT' to pick a Node version: 16, 14, 12.
@@ -16,7 +19,8 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"dbaeumer.vscode-eslint"
+		"dbaeumer.vscode-eslint",
+		"AmazonWebServices.aws-toolkit-vscode"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
