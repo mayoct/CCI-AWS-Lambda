@@ -14,6 +14,7 @@ jobs:
       - sam/install
       - run:
           command: |
+            cd sam-app
             sam build
             sam deploy --no-fail-on-empty-changeset
 
