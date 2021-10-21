@@ -14,8 +14,6 @@ jobs:
       - sam/install
       - run:
           command: |
-            cd sam-app/hello-world
-            npm install
             sam build
             sam deploy --no-fail-on-empty-changeset
 
